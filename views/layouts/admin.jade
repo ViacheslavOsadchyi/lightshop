@@ -1,0 +1,8 @@
+head
+	title= title
+	link#mainStylesheet(rel="stylesheet" type="text/css" href="/assets/css/admin.css")
+	script(type="text/javascript" src="/assets/js/main.js")
+body
+	#wrapper
+		include ../partials/admin-nav
+		div#page-wrapper!= body

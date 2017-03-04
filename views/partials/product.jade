@@ -1,0 +1,8 @@
+div.product.col-xs-12.col-md-6.col-lg-3
+	div.thumbnail.clearfix
+		div.productImgHolder.thumbnail
+			img.productImg(src="#{product.imgPath}")
+		h3.productTitle.text-center= product.title
+		p.productDesc.text-center= product.desc
+		span.addToCart.product__addToCart.btn.btn-default.pull-left Add To Cart
+		span.productPrice.pull-right= product.price	

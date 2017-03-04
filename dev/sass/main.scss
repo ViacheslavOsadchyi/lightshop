@@ -1,0 +1,98 @@
+@mixin translate ($axs,$ord){
+	-webkit-transform: translate($axs,$ord);
+	-ms-transform: translate($axs,$ord);
+	transform: translate($axs,$ord);	
+}
+
+#page{
+	margin-top: 50px;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+
+.productImgHolder{
+	position: relative;
+	padding-top: 100%;
+	overflow: hidden;
+}
+
+.productImg{
+	position: absolute;
+	width: 100%;
+	height: auto;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%,-50%);
+}
+
+.signupArea,
+.signinArea{
+	max-width: 570px;
+	padding: 20px;
+	margin: 0 auto;
+}
+.form-field{
+	width: 100%;
+}
+
+nav.navbar.navbar-fixed-top.navbar-inverse{
+	.navbar-nav > li > .navbar-form.navbar__searchForm{
+		color: #9d9d9d;
+	}
+}
+nav.navbar.navbar-fixed-top{
+	.navbar-nav.navbar-right{
+		button.navbar__controlEl_icon{
+			padding: 0;
+			background-color: transparent;
+			border-style: none;
+		}
+		button.navbar__controlEl_icon:hover{
+			color: #fff;
+		}
+		.glyphicon.navbar__controlEl_icon{
+			line-height: inherit;
+		}
+	}
+	.navbar-nav > li > .navbar-form.navbar__searchForm{
+		line-height: 20px;
+		padding: 15px;
+	}
+	.fa{
+		line-height: inherit;
+	}
+	.navbar-form.navbar__searchForm{
+		margin: auto;
+	}
+	.navbar__searchForm{
+		.form-group{
+			display: block;
+			float: left;
+		}
+		input[type="text"]{
+			padding: 0;
+			border-style: none;
+			border-bottom-style: solid;
+			border-bottom-width: 1px;
+			background-color: transparent;
+			color: inherit;
+		}
+		button{
+			margin-left: 10px;
+		}
+		input:focus,
+		button:focus{
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			outline: none;
+		}
+	}
+}
+
+/**************
+** ADMIN ******
+**************/
+
+
+/**************
+*\ ADMIN ******
+**************/

@@ -1,0 +1,10 @@
+head
+	title= title
+	link#mainStylesheet(rel="stylesheet" type="text/css" href="/assets/css/main.css")
+	script(type="text/javascript" src="/assets/js/main.js")
+body
+	include ../partials/header
+	div#page.container
+		body!= body
+
+

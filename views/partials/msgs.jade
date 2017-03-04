@@ -1,0 +1,7 @@
+- if ( msgs !== undefined ){
+	- for ( var msgType in msgs ){
+		- var msgSet = msgs[msgType]
+		each msg in msgSet
+			div.alert(class="alert-#{msgType}")= msg
+	- }	
+- }

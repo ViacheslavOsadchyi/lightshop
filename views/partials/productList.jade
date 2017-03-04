@@ -1,0 +1,6 @@
+div.productList
+	div.row.productList__holder
+		- for (var i = 0; i < products.length; i++){
+			- var product = products[i];
+			include product
+		- }

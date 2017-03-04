@@ -1,0 +1,69 @@
+nav.navbar.navbar-inverse.navbar-fixed-top.bg-inverse
+  .container
+    // Brand and toggle get grouped for better mobile display
+    .navbar-header
+      button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#bs-example-navbar-collapse-1', aria-expanded='false')
+        span.sr-only Toggle navigation
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      a.navbar-brand(href='/') Brand
+    // Collect the nav links, forms, and other content for toggling
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li.active
+          a(href='#')
+            | Link 
+            span.sr-only (current)
+        li
+          a(href='#') Link
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false')
+            | Dropdown 
+            span.caret
+          ul.dropdown-menu
+            li
+              a(href='#') Action
+            li
+              a(href='#') Another action
+            li
+              a(href='#') Something else here
+            li.divider(role='separator')
+            li
+              a(href='#') Separated link
+            li.divider(role='separator')
+            li
+              a(href='#') One more separated link
+      ul.nav.navbar-nav.navbar-right
+        li
+          form.navbar-form.navbar__searchForm
+            .form-group
+              input(type='text', placeholder='Search')
+            button.glyphicon.glyphicon-search(type='submit').navbar__controlEl.navbar__controlEl_icon
+        li
+          a(href='#', title="Cart")
+            span.glyphicon.glyphicon-shopping-cart.navbar__controlEl.navbar__controlEl_icon
+        li.dropdown
+          a.dropdown-toggle(href='#', data-toggle='dropdown', role='button', aria-haspopup='true', aria-expanded='false', title="User Management")
+            span.glyphicon.glyphicon-user.navbar__controlEl.navbar__controlEl_icon
+          - if ( user === undefined ){
+              ul.dropdown-menu
+                li
+                  a(href='/user/signup') Sign Up
+                li
+                  a(href='/user/signin') Sign In
+          - }else{
+              ul.dropdown-menu
+                li
+                  a(href='/user/signoutreq') Sign Out
+                li
+                  a(href='/user/profile') Profile
+          - }
+        li
+          - if ( user !== undefined && user.role === "admin" ){
+            li
+              a(href='/admin', title="Dashboard")
+                span.fa.fa-tachometer
+          - }
+    // /.navbar-collapse
+  // /.container-fluid

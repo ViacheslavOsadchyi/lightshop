@@ -1,16 +1,29 @@
 {
-  "name": "lightshop",
+  "name": "liteshop",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Slavrentyi",
+  "repository": "https://github.com/ViacheslavOsadchyi/liteshop",
   "license": "ISC",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "bluebird": "^3.4.7",
+    "bootstrap": "^3.3.7",
+    "connect-flash": "^0.1.1",
     "express": "^4.14.0",
+    "express-layout": "^0.1.0",
+    "express-session": "^1.15.0",
     "jade": "^1.11.0",
-    "mongodb": "^2.2.21"
+    "mongoose": "^4.7.7"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-add-src": "^0.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sass": "^3.1.0"
   }
 }

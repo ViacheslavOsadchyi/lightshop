@@ -1,0 +1,11 @@
+.thumbnail.clearfix.signinArea
+	h2 Sign in
+	form.signupForm.form(action="/user/signinreq" method="post")
+		include ../partials/msgs
+		.form-group
+			label(for="user_login")
+			input.form-field(type="text" name="user[login]" id="user_login" placeholder="type your login")
+		.form-group
+			label(for="user_pwd")
+			input.form-field(type="password" name="user[pwd]" id="user_pwd" placeholder="type your password")
+		button.btn.btn-primary.pull-right(type="submit") Log In

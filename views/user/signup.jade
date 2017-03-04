@@ -1,0 +1,14 @@
+.thumbnail.clearfix.signupArea
+	h2 Please fill the form
+	form.signupForm.form(action="/user/signupreq" method="post")
+		include ../partials/msgs
+		.form-group
+			label(for="user_login")
+			input.form-field(type="text" name="user[login]" id="user_login" placeholder="type your login")
+		.form-group
+			label(for="user_email")
+			input.form-field(type="email" name="user[email]" id="user_email" placeholder="type your email")
+		.form-group
+			label(for="user_pwd")
+			input.form-field(type="password" name="user[pwd]" id="user_pwd" placeholder="type your password")
+		button.btn.btn-primary.pull-right(type="submit") Sign Up
